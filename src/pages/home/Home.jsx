@@ -10,7 +10,7 @@ export const Home = () => {
         <Link className="left" to={"/todolist"}>
           <div>To-Do-List</div>
         </Link>
-        <Link className="right" to={"/shoppingCart"}>
+        <Link className="right" to={"/shop"}>
           <div className="right">Shopping Cart</div>
         </Link>
       </div>
