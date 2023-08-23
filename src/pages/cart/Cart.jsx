@@ -6,7 +6,8 @@ import { ShopContext } from "../../context/ShopContext";
 import CartItem from "./CartItem";
 
 const Cart = () => {
-  const { cartItems } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const totalAmount = getTotalCartAmount();
   return (
     <div>
       <Navbar />
@@ -20,6 +21,10 @@ const Cart = () => {
               return <CartItem key={product.id} data={product} />;
             }
           })}
+        </div>
+        <div className="checkout">
+          <p>Subtotal: ${totalAmount}</p>
+          <button>Continue Shopping</button>
         </div>
       </div>
     </div>
