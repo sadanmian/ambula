@@ -20,6 +20,20 @@
   width: 200px;
 }
 
+.cartItemBtn {
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  background: none;
+}
+
+.cartItemInput {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
 .cartItem .description {
   width: 100%;
   font-size: 30px;

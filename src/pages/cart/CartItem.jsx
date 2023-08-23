@@ -14,14 +14,23 @@ const CartItem = ({ data }) => {
         </p>
         <p>${data.price}</p>
         <div className="countHandler">
-          <button onClick={() => removeFromCart(data.id)}> - </button>
-          <input
+          <button
+            className="cartItemBtn"
+            onClick={() => removeFromCart(data.id)}
+          >
+            {" "}
+            -{" "}
+          </button>
+          <input className="cartItemInput"
             value={cartItems[data.id]}
             onChange={(e) =>
               updateCartItemCount(Number(e.target.value), data.id)
             }
           />
-          <button onClick={() => addToCart(data.id)}> + </button>
+          <button className="cartItemBtn" onClick={() => addToCart(data.id)}>
+            {" "}
+            +{" "}
+          </button>
         </div>
       </div>
     </div>
