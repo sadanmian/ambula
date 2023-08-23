@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/home/Home";
 import { ShoppingCart } from "./pages/shoppingCart/ShoppingCart";
-import { ToDoList } from "./pages/to-do-list/ToDoList";
+import ToDoList from "./pages/to-do-list/ToDoList";
 
 function App() {
   return (

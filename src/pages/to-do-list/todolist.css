@@ -1,64 +1,139 @@
 .td {
-  background: rgb(65, 60, 148);
+  background: rgb(171, 166, 255);
   background: linear-gradient(
-    152deg,
-    rgba(65, 60, 148, 1) 0%,
-    rgba(12, 45, 135, 1) 44%,
-    rgba(27, 27, 87, 1) 92%
+    138deg,
+    rgba(171, 166, 255, 1) 0%,
+    rgba(166, 237, 250, 1) 58%,
+    rgba(239, 210, 240, 1) 92%
   );
-  height: 100vh;
+  color: black;
   width: 100vw;
-  display: flex;
-  justify-content: center;
-  color: white;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.td-container {
-  margin-top: 50px;
-  width: 700px;
+.td-home {
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  background-color: #61dafb;
+  font-weight: 500;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+main {
+  max-width: 400px;
+  margin: 20px auto;
 }
 
 form {
-  display: flex;
-  border: 3px solid lightgoldenrodyellow;
+  margin-top: 50px;
+  border: 3px solid #30313d;
   border-radius: 10px;
   padding: 10px;
-}
-
-form input {
-  color: white;
   display: flex;
-  background: none;
-  border: 0;
-  width: 100%;
-  outline: 0;
-  padding: 0 8px;
 }
 
-form input::placeholder {
-  color: white;
+form input[type="text"] {
+  background: none;
+  color: black;
+  font-weight: 500;
+  border: 0;
+  padding: 0 8px;
+  display: block;
+  width: 100%;
+  outline: none;
 }
 
 form button {
-  background-color: #61dafb;
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
   height: 30px;
   width: 30px;
   border-radius: 50%;
+}
+
+div.task {
+  background: rgb(171, 166, 255);
+  background: linear-gradient(
+    138deg,
+    rgba(171, 166, 255, 1) 0%,
+    rgba(166, 237, 250, 1) 58%,
+    rgba(239, 210, 240, 1) 92%
+  );
+  border-radius: 10px;
+  padding: 10px 9px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s linear;
+}
+
+div.task svg {
+  height: 20px;
+  margin-right: 6px;
+  fill: black;
+}
+
+div.task.done {
+  opacity: 0.3;
+}
+
+div.task-name,
+div.task form {
+  flex-grow: 1;
+}
+
+div.task span {
+  position: relative;
+}
+
+div.task span:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 10px;
+  transition: width 0.1s linear;
+}
+
+div.task.done span:before {
+  width: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+div.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+button.trash {
+  background: none;
   border: none;
-  font-weight: 500;
-  font-size: 18px;
+  display: flex;
   cursor: pointer;
 }
 
-.task {
-  background-color: #30313d;
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 10px;
-  display: flex;
+button.trash svg {
+  fill: black;
+  height: 14px;
 }
 
-.task svg {
-  height: 20px;
-  margin-right: 10px;
+div.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
 }
