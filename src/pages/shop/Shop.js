@@ -2,7 +2,6 @@ import React from "react";
 import { Navbar } from "../../components/navbar/Navbar";
 import { PRODUCTS } from "../../products";
 import Product from "./Product";
-import "./shop.css";
 
 const Shop = () => {
   return (
