@@ -24,6 +24,12 @@
   border-radius: 10px;
 }
 
+.td-nav > span {
+  font-weight: 800;
+  font-size: 25px;
+  color: blueviolet;
+}
+
 main {
   max-width: 400px;
   margin: 20px auto;
@@ -133,7 +139,6 @@ button.trash svg {
 }
 
 div.task input {
-  border: 2px solid #555;
   border-radius: 5px;
   padding: 2px 4px;
 }

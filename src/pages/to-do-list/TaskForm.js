@@ -4,8 +4,10 @@ export default function TaskForm({ onAdd }) {
   const [taskName, setTaskName] = useState("");
   function handleSubmit(ev) {
     ev.preventDefault();
-    onAdd(taskName);
-    setTaskName("");
+    if (taskName.trim() !== "") {
+      onAdd(taskName);
+      setTaskName("");
+    }
   }
   return (
     <form onSubmit={handleSubmit}>
